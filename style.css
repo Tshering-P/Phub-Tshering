@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.dashboard-header {
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(135deg, #ff6f61, #ff4b2b);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease;
+  width: 100%;
+  height: 137.8px; /* Original height (100px) + 37.8px (1cm) */
+  overflow: hidden; /* Ensure the image doesn't overflow the header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image {
+  width: 100%; /* Make the image fill the width of the header */
+  height: 100%; /* Make the image fill the height of the header */
+  object-fit: cover; /* Ensure the image covers the area without distorting */
+  display: block;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease;
+}
+
+/* Make the left side (translator and audio) smaller */
+.left-side {
+  flex: 1; /* This will take up 1 part of the available space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Make the transcription section larger */
+.transcription-section {
+  flex: 3; /* This will take up 3 parts of the available space */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Card Styles with Gradient Backgrounds */
+.card {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Translator Section */
+#translator textarea, #translator select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#output {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-height: 50px;
+  font-family: "Times New Roman", "Dzongkha Front", sans-serif;
+}
+
+/* Audio Section */
+.audio-section {
+  background: linear-gradient(135deg, #ff6f61, #ff4b2b);
+  color: white;
+}
+
+.audio-section input[type="file"] {
+  margin-bottom: 12px;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-icon {
+  padding: 12px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ff6f61, #ff4b2b);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff6f61);
+  transform: scale(1.1);
+}
+
+/* Transcription Section */
+.transcription-section {
+  background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+}
+
+.transcription-section textarea {
+  width: 100%;
+  height: 500px; /* Increase the height of the textarea */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#font-size-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #ff6f61, #ff4b2b);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff6f61);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard-header {
+    height: 117.8px; /* Original height (80px) + 37.8px (1cm) */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    height: 97.8px; /* Original height (60px) + 37.8px (1cm) */
+  }
+}

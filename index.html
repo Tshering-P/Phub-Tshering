@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NA Session Transcription with Translator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+  <!-- Header with Image -->
+  <header class="dashboard-header">
+    <img src="C:\Users\user\Downloads\phubtshehrhrhhrrrrrrrrr (1).png" alt="National Assembly of Bhutan" class="header-image">
+  </header>
+
+  <div class="dashboard">
+    <!-- Left Side: Translator and Audio Section -->
+    <div class="left-side">
+      <!-- Translator Section -->
+      <div id="translator" class="card">
+        <h2>Translator</h2>
+        <textarea id="inputText" placeholder="Type text here..."></textarea>
+        <select id="language">
+          <option value="dz">Dzongkha (Bhutanese)</option>
+        </select>
+        <button onclick="translateText()" class="btn-gradient">Translate</button>
+        <div id="output">Translation will appear here...</div>
+      </div>
+
+      <!-- Audio Section -->
+      <div class="audio-section card">
+        <h2>Audio Player</h2>
+        <input type="file" id="audio-file" accept="audio/*" class="file-input">
+        <audio id="audio-player" controls>
+          Your browser does not support the audio element.
+        </audio>
+        <div class="audio-controls">
+          <button id="play-btn" class="btn-icon"><i class="fas fa-play"></i></button>
+          <button id="pause-btn" class="btn-icon"><i class="fas fa-pause"></i></button>
+          <button id="rewind-btn" class="btn-icon"><i class="fas fa-backward"></i></button>
+          <button id="fast-forward-btn" class="btn-icon"><i class="fas fa-forward"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Transcription Section -->
+    <div class="transcription-section card">
+      <h2>Transcription</h2>
+      <div class="font-controls">
+        <label for="font-size" id="font-size-label">Font Size:</label>
+        <button id="increase-font-btn" class="btn-gradient">B+</button>
+        <button id="decrease-font-btn" class="btn-gradient">B-</button>
+      </div>
+      <textarea id="transcription-text" placeholder="Transcribe audio here..."></textarea>
+      <div class="action-buttons">
+        <button id="save-btn" class="btn-gradient">Save</button>
+        <button id="load-btn" class="btn-gradient">Load</button>
+        <button id="convert-btn" class="btn-gradient">Convert to Word</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
